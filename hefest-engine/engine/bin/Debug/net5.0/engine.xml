@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>engine</name>
+    </assembly>
+    <members>
+        <member name="T:engine.AppDBContext">
+            <summary>
+            Initializes the database
+            </summary>
+        </member>
+        <member name="M:engine.Controllers.DepartmentController.Get">
+            <summary>
+            Get departments
+            </summary>
+            <remarks>
+            Get all the company departments
+            </remarks>
+            <response code="200">Returns all the available departments</response>
+        </member>
+        <member name="M:engine.Controllers.DepartmentController.Post(engine.Models.Department)">
+             <summary>
+             Creates a new department
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST
+                 {
+                    "name": "IT"
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:engine.Controllers.DepartmentController.Put(System.Int32,engine.Models.Department)">
+             <summary>
+             Updates a department
+             </summary>
+             <param name="id"></param>
+             <remarks>
+             Sample request:
+            
+                 PUT
+                 {
+                    "id": 2
+                    "name": "Software"
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:engine.Controllers.DepartmentController.Delete(System.Int32)">
+            <summary>
+            Deletes a department
+            </summary>
+            <param name="id"></param>
+            <remarks>
+            Deletes a department with a given identification
+            </remarks>
+        </member>
+        <member name="M:engine.Controllers.EmployeeController.Get">
+            <summary>
+            Get employees
+            </summary>
+            <remarks>
+            Get all the company employees
+            </remarks>
+            <response code="200">Returns all the available employees</response>
+        </member>
+        <member name="M:engine.Controllers.EmployeeController.Post(engine.Models.Employee)">
+             <summary>
+             Creates a new employee
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST
+                 {
+                    "name": "John Doe",
+                    "department": "IT",
+                    "createdAt": "02-10-2021",
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:engine.Controllers.EmployeeController.Put(System.Int32,engine.Models.Employee)">
+             <summary>
+             Updates an employee
+             </summary>
+             <param name="id"></param>
+             <remarks>
+             Sample request:
+            
+                 PUT
+                 {
+                    "id": 2
+                    "name": "John Doe",
+                    "department": "Software",
+                    "createdAt": "02-10-2021",
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:engine.Controllers.EmployeeController.Delete(System.Int32)">
+            <summary>
+            Deletes an employee
+            </summary>
+            <param name="id"></param>
+            <remarks>
+            Deletes an employee with a given identification
+            </remarks>
+        </member>
+    </members>
+</doc>
