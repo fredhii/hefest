@@ -1,0 +1,51 @@
+<!-- FORM -->
+<div class="form-froup row">
+  <!-- Name -->
+  <label class="col-sm-2 col-form-label">Employee Name</label>
+  <div class="col-sm-10 mb-2">
+    <input type="text" class="form-control" [(ngModel)]="employeeName" placeholder="Enter Employee Name">
+  </div>
+  <!-- Last name -->
+  <label class="col-sm-2 col-form-label">Employee Last Name</label>
+  <div class="col-sm-10 mb-2">
+    <input type="text" class="form-control" [(ngModel)]="lastName" placeholder="Enter Employee Last Name">
+  </div>
+  <!-- Department -->
+  <label class="col-sm-2 col-form-label">Department</label>
+  <div class="col-sm-10 mb-2">
+    <select class="form-control" [(ngModel)]="departmentName">
+      <option>--Select--</option>
+      <option *ngFor="let department of departmentsList">
+        {{department.name}}
+      </option>
+    </select>
+  </div>
+  <!-- Date -->
+  <label class="col-sm-2 col-form-label">Employee Name</label>
+  <div class="col-sm-10 mb-2">
+    <input type="date" [(ngModel)]="createdAt">
+  </div>
+  <!-- Salary -->
+  <label class="col-sm-2 col-form-label">Salary</label>
+  <div class="col-sm-10 mb-2">
+    <input type="number" class="form-control" [(ngModel)]="employeeName" placeholder="Enter Employee Name">
+  </div>
+  <!-- Job -->
+  <label class="col-sm-2 col-form-label">Job</label>
+  <div class="col-sm-10 mb-2">
+    <input type="text" class="form-control" [(ngModel)]="job" placeholder="Employee Job Title">
+  </div>
+  <!-- Notes -->
+  <label class="col-sm-2 col-form-label">Notes</label>
+  <div class="col-sm-10 mb-4">
+    <input type="text" class="form-control" [(ngModel)]="notes" placeholder="Notes">
+  </div>
+</div>
+
+<button (click)="addEmployee()" *ngIf="employee?.id == 0" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateEmployee()" *ngIf="employee?.id != 0" class="btn btn-primary">
+  Update
+</button>

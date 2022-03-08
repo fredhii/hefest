@@ -1,0 +1,36 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "16" }
+	},
+	"settings": { 
+		"terminal.integrated.defaultProfile.linux": "zsh"
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"mikestead.dotenv",
+		"eamodio.gitlens",
+		"oderwat.indent-rainbow",
+		"christian-kohler.npm-intellisense",
+		"pflannery.vscode-versionlens",
+		"coenraads.bracket-pair-colorizer-2",
+		"usernamehw.errorlens",
+		"ms-vsliveshare.vsliveshare",
+		"github.copilot",
+		"johnpapa.vscode-peacock",
+		"johnpapa.Angular2",
+		"esbenp.prettier-vscode"
+	],
+	"portsAttributes": {
+		"3000": {
+			"label": "Hefest UI",
+			"onAutoForward": "notify"
+		}
+	},
+	"otherPortsAttributes": {
+			"onAutoForward": "silent"
+	},
+	"postCreateCommand": "npm install",
+	"remoteUser": "node"
+}
